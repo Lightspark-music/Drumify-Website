@@ -375,7 +375,7 @@ a:focus-visible, button:focus-visible {
   font-weight: 700;
   font-size: 1.05rem;
   letter-spacing: 0.04em;
-  padding: 14px 18px;
+  padding: 8px 18px;
   border-radius: 4px;
   background: var(--accent);
   color: var(--surface);
@@ -385,6 +385,18 @@ a:focus-visible, button:focus-visible {
 }
 
 .get:hover { filter: brightness(1.08); transform: translateY(-1px); }
+
+.downloads { display: grid; gap: 10px; }
+
+.get small {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
 
 .spec {
   font-family: var(--display);
@@ -398,7 +410,7 @@ a:focus-visible, button:focus-visible {
 }
 
 .spec div { display: flex; justify-content: space-between; gap: 14px; }
-.spec b { font-weight: 700; color: var(--ink); }
+.spec b { font-weight: 700; color: var(--ink); text-align: right; }
 
 .rail .note { font-size: 0.78rem; color: var(--ink-soft); line-height: 1.6; }
 
@@ -886,11 +898,14 @@ footer {
 
     <aside class="rail">
       <div class="price">Free<span>No account, no trial</span></div>
-      <a class="get" href="Drumify-1.0.pkg">Download Drumify</a>
+      <div class="downloads">
+        <a class="get" href="Drumify-1.0.pkg" download>macOS<small>Download .pkg</small></a>
+        <a class="get" href="Drumify-1.0.exe" download>Windows 64-bit<small>Download .exe</small></a>
+      </div>
       <div class="spec">
         <div><span>Formats</span><b>VST3 &middot; AU</b></div>
         <div><span>Standalone</span><b>Yes</b></div>
-        <div><span>Platform</span><b>macOS</b></div>
+        <div><span>Platforms</span><b>macOS &middot; Win x64</b></div>
         <div><span>Price</span><b>&pound;0</b></div>
       </div>
     </aside>
